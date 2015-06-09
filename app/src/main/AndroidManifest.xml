@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SelectYesActivity"
+            android:label="@string/title_activity_select_yes" >
+        </activity>
     </application>
 
 </manifest>
