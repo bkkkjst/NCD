@@ -1,0 +1,246 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพศ"/>
+    <RadioGroup
+        android:id="@+id/rgp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ชาย"/>
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="หญิง"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_idCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เลขบัตรประจำตัวประชาชน"/>
+    <EditText
+        android:id="@+id/etx_idCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="เลขบัตรประจำตัวประชาชน 13 หลัก"/>
+    <TextView
+        android:id="@+id/tv_birthDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="วันเดือนปีเกิด"/>
+    <EditText
+        android:id="@+id/etx_birthDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="วัน/เดือน/ปี"/>
+    <TextView
+        android:id="@+id/tv_religion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ศาสนา"/>
+    <RadioGroup
+        android:id="@+id/rgp_religion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbn_Buddhism"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="พุทธ"/>
+        <RadioButton
+            android:id="@+id/rbn_Christianity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="คริสต์"/>
+        <RadioButton
+            android:id="@+id/rbn_Islam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="อิสลาม"/>
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_weightBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="น้ำหนักตัว"/>
+    <EditText
+        android:id="@+id/etx_weightBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="กิโลกรัม"/>
+
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ส่วนสูง"/>
+    <EditText
+        android:id="@+id/etx_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="เซนติเมตร"/>
+
+    <TextView
+        android:id="@+id/tv_waistline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="รอบเอว"/>
+    <EditText
+        android:id="@+id/etx_waistline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="เซนติเมตร"/>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_BloodPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ควาดันโลหิต"/>
+    <EditText
+        android:id="@+id/etx_BloodPressureFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="มิลลิเมตรปรอท"/>
+    <TextView
+        android:id="@+id/tv_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"/>
+    <EditText
+        android:id="@+id/etx_BloodPressureBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="มิลลิเมตรปรอท"/>
+
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_BloodSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ค่าน้ำตาลในเลือด"/>
+    <EditText
+        android:id="@+id/etx_BloodSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="มิลลิกรัมต่อเดซิลิตร"/>
+
+    <TextView
+        android:id="@+id/tv_questionP6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ท่านมีโรคประจำตัวหรือไม่"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_diabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="โรคเบาหวาน"/>
+
+        <RadioGroup
+            android:id="@+id/rgp_diabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbn_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เป็น"/>
+            <RadioButton
+                android:id="@+id/rbn_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ไม่เป็น"/>
+            <RadioButton
+                android:id="@+id/rbn_neverCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ไม่เคยตรวจ"/>
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_Hypertension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="โรคความดันโลหิตสุง"/>
+
+
+
+        <RadioGroup
+            android:id="@+id/rgp_Hypertension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right">
+            <RadioButton
+                android:id="@+id/rbn_yes_Hypertension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เป็น"/>
+            <RadioButton
+                android:id="@+id/rbn_no_Hypertension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ไม่เป็น"/>
+            <RadioButton
+                android:id="@+id/rbn_neverCheckHypertension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ไม่เคยตรวจ"/>
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</ScrollView>
