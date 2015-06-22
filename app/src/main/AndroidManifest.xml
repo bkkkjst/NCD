@@ -10,6 +10,18 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SelectYesActivity"
+            android:label="@string/title_activity_select_yes" >
+        </activity>
+        <activity
+            android:name=".UserAgreeActivity"
+            android:label="@string/title_activity_user_agree" >
+        </activity>
+        <activity
+            android:name=".MenuButtonActivity"
+            android:label="@string/title_activity_menu_button" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +29,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectYesActivity"
-            android:label="@string/title_activity_select_yes" >
+            android:name=".ScreenAge14to34YearsActivity"
+            android:label="@string/title_activity_screen_age14to34_years" >
         </activity>
     </application>
 

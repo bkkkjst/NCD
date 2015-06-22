@@ -3,4 +3,24 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_select_yes">SelectYesActivity</string>
+    <string name="title_activity_user_agree">UserAgreeActivity</string>
+
+
+    <!-- layout user agree-->
+    <string name="header_user_agree">แบบบันทึกคัดกรองความเสี่ยงประชากร</string>
+    <string name="age_14_to_34_years">อายุ 14 - 34 ปี</string>
+    <string name="age_35_years_up">อายุ 35 ปีขึ้นไป</string>
+    <string name="rule">เฉพาะผู้ไม่เป็นผู้ป่วยเบาหวานและความดันโลหิตสูง</string>
+    <string name="agree">ยอมรับ</string>
+    <string name="no">ไม่ยอมรับ</string>
+
+
+    <!-- layout menu button-->
+    <string name="personal_information">ประวัติส่วนตัว</string>
+    <string name="screen_age_14_to_34_years">แบบคัดกรอง อายุ 14 - 34 ปี</string>
+    <string name="screen_age_35_years_up">แบบคัดกรอง อายุ 35 ปี ขึ้นไป</string>
+    <string name="result">แปลผล</string>
+    <string name="title_activity_menu_button">MenuButtonActivity</string>
+    <string name="title_activity_screen_age14to34_years">ScreenAge14to34YearsActivity</string>
+
 </resources>
