@@ -240,6 +240,106 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_graduate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="จบการศึกษา" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbn_nonStudy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ไม่ได้รับการศึกษา"/>
+        <RadioButton
+            android:id="@+id/rbn_PrimarySchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ระดับประถมศึกษา"/>
+        <RadioButton
+            android:id="@+id/rbn_SecondarySchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ระดับมัธยมศึกษา"/>
+        <RadioButton
+            android:id="@+id/rbn_BAorMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ระดับปริญญาตรีหรือสูงกว่า"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_status"
+        android:text="สถานภาพ"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbn_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="โสด"/>
+
+        <RadioButton
+            android:id="@+id/rbn_married"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สมรส"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="อาชีพ"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbn_gardener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เกษตรกรรม"/>
+        <RadioButton
+            android:id="@+id/rbn_trader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ค้าขาย"/>
+        <RadioButton
+            android:id="@+id/rbn_freelance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รับจ้าง"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbn_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อื่นๆ"/>
+
+            <EditText
+                android:id="@+id/etx_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rbn_other"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@+id/rbn_other"
+                android:ems="10" />
+        </RelativeLayout>
+    </RadioGroup>
 
 
 </LinearLayout>

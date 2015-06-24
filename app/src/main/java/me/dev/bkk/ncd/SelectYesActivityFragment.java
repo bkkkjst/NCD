@@ -8,9 +8,7 @@ import android.view.ViewGroup;
 
 import android.widget.ListView;
 
-import java.util.Arrays;
 
-import me.dev.bkk.ncd.adapter.QuestionP6H1YesAdapter;
 
 
 /**
@@ -33,7 +31,7 @@ public class SelectYesActivityFragment extends Fragment {
 
         String data[] = {"zzz","xxx","ccc"};
 
-        QuestionP6H1YesAdapter questionP6H1YesAdapter = new QuestionP6H1YesAdapter(getActivity(), data);
+
 
         return rootView;
     }

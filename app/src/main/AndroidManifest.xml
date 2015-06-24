@@ -32,6 +32,14 @@
             android:name=".ScreenAge14to34YearsActivity"
             android:label="@string/title_activity_screen_age14to34_years" >
         </activity>
+        <activity
+            android:name=".ScreenAge35YearsUpActivity"
+            android:label="@string/title_activity_screen_age35_years_up" >
+        </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/title_activity_result" >
+        </activity>
     </application>
 
 </manifest>

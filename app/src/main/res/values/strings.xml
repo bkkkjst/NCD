@@ -20,7 +20,40 @@
     <string name="screen_age_14_to_34_years">แบบคัดกรอง อายุ 14 - 34 ปี</string>
     <string name="screen_age_35_years_up">แบบคัดกรอง อายุ 35 ปี ขึ้นไป</string>
     <string name="result">แปลผล</string>
+
+
+
     <string name="title_activity_menu_button">MenuButtonActivity</string>
     <string name="title_activity_screen_age14to34_years">ScreenAge14to34YearsActivity</string>
+    <string name="title_activity_screen_age35_years_up">ScreenAge35YearsUpActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+
+    <!-- Question -->
+    <string-array name="Question">
+        <!-- Question 14 to 34 years  -->
+        <item>มีพ่อ  แม่  พี่หรือน้อง เป็นโรคเบาหวาน</item>
+        <item>มีภาวะอ้วน(ดัชนีมวลกาย >25 กก/ตร.ม)  หรือ เอวเกิน ชาย > 90 ซม.  หญิง > 80  ซม.</item>
+        <item>มีภาวะความดันโลหิตสูง  BP  > = 140/90 MmHg หรือเคยมีประวัติเป็นโรคความดันโลหิตสูง</item>
+        <item>มีรอยพับรอบคอหรือใต้รักแร้ดำ</item>
+        <!-- Question 35 years up -->
+        <item>มีประวัติหรือเคยมีประวัติน้ำตาลในเลือดสูง</item>
+        <item>มีภาวะไขมันในเลือดผิดปกติ (ไตรกลีเซอไรด์)  ≥250 มก./ดล. และ/หรือ เอส ดี แอล  &#60;35 มก./ดล.</item>
+        <item>มีประวัติเป็นเบาหวานขณะตั้งครรภ์หรือมีประวัติการคลอดบุตรที่น้ำหนักตัวแรกคลอด >  4  กิโลกรัม</item>
+
+
+    </string-array>
+
+
+    <string-array name="header">
+        <item>แบบบันทึกคัดกรองความเสี่ยงประชากร อายุ 35 ปีขึ้นไป</item>
+        <item>แบบบันทึกคัดกรองความเสี่ยงประชากร อายุ 14 - 34 ปีขึ้นไป</item>
+    </string-array>
+
+    <string name="next">ข้อถัดไป</string>
+    <string name="back">ข้อก่อนหน้า</string>
+
+    <string name="rbn_yes">ใช่</string>
+    <string name="rbn_no">ไม่ใช่</string>
 
 </resources>

@@ -40,6 +40,34 @@ public class MenuButtonActivityFragment extends Fragment {
        });
 
 
+        btn_screen_age_14_to_34_years.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent screen_age_14_to_34_years = new Intent(getActivity(), ScreenAge14to34YearsActivity.class);
+                getActivity().startActivity(screen_age_14_to_34_years);
+            }
+        });
+
+        btn_screen_age_35_years_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent screen_age_35_years_up = new Intent(getActivity(), ScreenAge35YearsUpActivity.class);
+                getActivity().startActivity(screen_age_35_years_up);
+            }
+        });
+
+        btn_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent result = new Intent(getActivity(), ResultActivity.class);
+                getActivity().startActivity(result);
+            }
+        });
+
+
+
+
+
         return rootView;
 
     }
