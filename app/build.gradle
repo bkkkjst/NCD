@@ -22,6 +22,7 @@ android {
     sourceSets {
         main {
             java.srcDirs = ['src/main/java', 'src/main/java/adapter', 'src/main/java/me.dev.bkk.ncd/adapter', 'src/main/java/2']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/font', 'src/main/res/assets/']
         }
     }
 }

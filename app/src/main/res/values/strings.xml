@@ -13,6 +13,7 @@
     <string name="rule">เฉพาะผู้ไม่เป็นผู้ป่วยเบาหวานและความดันโลหิตสูง</string>
     <string name="agree">ยอมรับ</string>
     <string name="no">ไม่ยอมรับ</string>
+    <string name="btn_go">ตกลง</string>
 
 
     <!-- layout menu button-->
@@ -55,5 +56,22 @@
 
     <string name="rbn_yes">ใช่</string>
     <string name="rbn_no">ไม่ใช่</string>
+    
+    <string name="result_normal">กลุ่มปกติ</string>
+    <string name="advice_one">1. ให้ตรวจสุขภาพปีละ 1 ครั้ง</string>
+    <string name="advice_two">2. ปฏิบัติตัวตามหลัก 3อ2ส</string>
+    <string name="two_one">- การบริโภคอาหารควรลด หวาน มัน เค็ม</string>
+    <string name="two_two">- ออกกำลังกายวันละ 30 นาที อย่างน้อย 5 วัน/สัปดาห์</string>
+    <string name="two_three">- มีอารมณ์ ไม่เครียด</string>
+    <string name="two_four">- ไม่สูบบุหรี่/ดื่มสุรา</string>
+
+    <string name="result_risk">กลุ่มเสี่ยง</string>
+    <string name="advice_check">1. ให้ตรวจเลือดซ้ำอีก 2 สัปดาห์ ถ้า DTX &#60; 126 มก./ดล. ต้องพบแพทย์เพื่อวินิจฉัยโรค แต่ภายใน 2 สัปดาห์ถ้าหากค่า TDX > 100 มก./ดล. ลงมา ให้ปรับเปลี่ยนพฤติกรรมและตรวจซ้ำทุก 6 เดือน   </string>
+    <string name="advice_change">3. เข้าค่ายปรับเปลี่ยนพฤติกรรม 3อ2ส</string>
+    
+    <string name="you_not_risk">คุณไม่มีความเสี่ยงที่จะเป็นโรคเบาหวาน</string>
+    <string name="you_risk">คุณมีความเสี่ยงที่จะเป็นโรคเบาหวาน</string>
+    <string name="advice">คำแนะนำ</string>
+    
 
 </resources>

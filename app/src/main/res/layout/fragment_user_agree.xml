@@ -47,7 +47,7 @@
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tv_warning"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
@@ -71,5 +71,13 @@
             android:checked="false" />
 
     </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_go"
+        android:id="@+id/btn_go"
+        android:layout_below="@+id/rg_agree_or_no"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

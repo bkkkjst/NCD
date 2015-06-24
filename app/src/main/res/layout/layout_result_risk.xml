@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/result_normal"
+        android:text="@string/result_risk"
         android:id="@+id/tv_result"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/you_not_risk"
+        android:text="@string/you_risk"
         android:id="@+id/tv_you_not_risk"
         android:layout_below="@+id/tv_result"
         android:layout_centerHorizontal="true" />
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/advice_one"
+        android:text="@string/advice_check"
         android:id="@+id/tv_advice_one"
         android:layout_marginTop="27dp"
         android:layout_below="@+id/tv_advice"
@@ -97,4 +97,15 @@
         android:layout_below="@+id/tv_three"
         android:layout_alignLeft="@+id/tv_three"
         android:layout_alignStart="@+id/tv_three" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/advice_change"
+        android:id="@+id/tv_advice_three"
+        android:layout_below="@+id/tv_four"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>
