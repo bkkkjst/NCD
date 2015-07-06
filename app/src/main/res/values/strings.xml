@@ -7,13 +7,14 @@
 
 
     <!-- layout user agree-->
-    <string name="header_user_agree">แบบบันทึกคัดกรองความเสี่ยงประชากร</string>
+    <string name="header_user_agree"><u>แบบบันทึกคัดกรองความเสี่ยงโรคเบาหวาน</u></string>
     <string name="age_14_to_34_years">อายุ 14 - 34 ปี</string>
     <string name="age_35_years_up">อายุ 35 ปีขึ้นไป</string>
     <string name="rule">เฉพาะผู้ไม่เป็นผู้ป่วยเบาหวานและความดันโลหิตสูง</string>
     <string name="agree">ยอมรับ</string>
     <string name="no">ไม่ยอมรับ</string>
     <string name="btn_go">ตกลง</string>
+    <string name="btn_save">บันทึก</string>
 
 
     <!-- layout menu button-->
@@ -47,8 +48,8 @@
 
 
     <string-array name="header">
-        <item>แบบบันทึกคัดกรองความเสี่ยงประชากร อายุ 35 ปีขึ้นไป</item>
-        <item>แบบบันทึกคัดกรองความเสี่ยงประชากร อายุ 14 - 34 ปีขึ้นไป</item>
+        <item>แบบบันทึกคัดกรองความเสี่ยงโรคเบาหวาน อายุ 35 ปีขึ้นไป</item>
+        <item>แบบบันทึกคัดกรองความเสี่ยงโรคเบาหวาน อายุ 14 - 34 ปีขึ้นไป</item>
     </string-array>
 
     <string name="next">ข้อถัดไป</string>
@@ -72,6 +73,8 @@
     <string name="you_not_risk">คุณไม่มีความเสี่ยงที่จะเป็นโรคเบาหวาน</string>
     <string name="you_risk">คุณมีความเสี่ยงที่จะเป็นโรคเบาหวาน</string>
     <string name="advice">คำแนะนำ</string>
+    <string name="title_activity_result_not_risk">ResultNotRiskActivity</string>
+    <string name="title_activity_result_risk">ResultRiskActivity</string>
     
 
 </resources>

@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     android:id="@+id/scrollView">
 
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment"
-    android:orientation="vertical">
+    >
 
 
     <TextView
@@ -19,17 +19,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="เพศ"/>
+
     <RadioGroup
+        android:layout_below="@id/tv_gender"
         android:id="@+id/rgp_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RadioButton
-            android:id="@+id/male"
+            android:id="@+id/rbn_male"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ชาย"/>
         <RadioButton
-            android:id="@+id/female"
+            android:id="@+id/rbn_female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="หญิง"/>
@@ -37,16 +39,19 @@
     </RadioGroup>
 
     <TextView
+        android:layout_below="@id/rgp_gender"
         android:id="@+id/tv_idCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="เลขบัตรประจำตัวประชาชน"/>
     <EditText
+        android:layout_below="@id/tv_idCard"
         android:id="@+id/etx_idCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="เลขบัตรประจำตัวประชาชน 13 หลัก"/>
     <TextView
+        android:layout_below="@+id/etx_idCard"
         android:id="@+id/tv_birthDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,16 +60,19 @@
         android:id="@+id/etx_birthDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="วัน/เดือน/ปี"/>
+        android:text="วัน/เดือน/ปี"
+        android:layout_below="@+id/tv_birthDate"/>
     <TextView
         android:id="@+id/tv_religion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ศาสนา"/>
+        android:text="ศาสนา"
+        android:layout_below="@+id/etx_birthDay"/>
     <RadioGroup
         android:id="@+id/rgp_religion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_religion">
         <RadioButton
             android:id="@+id/rbn_Buddhism"
             android:layout_width="match_parent"
@@ -88,41 +96,49 @@
         android:id="@+id/tv_weightBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="น้ำหนักตัว"/>
+        android:text="น้ำหนักตัว"
+        android:layout_below="@+id/rgp_religion"/>
     <EditText
         android:id="@+id/etx_weightBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="กิโลกรัม"/>
+        android:hint="กิโลกรัม"
+        android:layout_below="@+id/tv_weightBody"/>
 
 
     <TextView
         android:id="@+id/tv_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ส่วนสูง"/>
+        android:text="ส่วนสูง"
+        android:layout_below="@+id/etx_weightBody"/>
     <EditText
         android:id="@+id/etx_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="เซนติเมตร"/>
+        android:hint="เซนติเมตร"
+        android:layout_below="@+id/tv_height"/>
 
     <TextView
         android:id="@+id/tv_waistline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="รอบเอว"/>
+        android:text="รอบเอว"
+        android:layout_below="@+id/etx_height"/>
     <EditText
         android:id="@+id/etx_waistline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="เซนติเมตร"/>
+        android:hint="เซนติเมตร"
+        android:layout_below="@+id/tv_waistline"/>
 
 
 <LinearLayout
+    android:id="@+id/ll_BloodPressure"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_below="@+id/etx_waistline">
     <TextView
         android:id="@+id/tv_BloodPressure"
         android:layout_width="wrap_content"
@@ -147,27 +163,20 @@
 
 </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_BloodSugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ค่าน้ำตาลในเลือด"/>
-    <EditText
-        android:id="@+id/etx_BloodSugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="มิลลิกรัมต่อเดซิลิตร"/>
 
     <TextView
         android:id="@+id/tv_questionP6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="ท่านมีโรคประจำตัวหรือไม่"/>
+        android:hint="ท่านมีโรคประจำตัวหรือไม่"
+        android:layout_below="@+id/ll_BloodPressure"/>
 
     <LinearLayout
+        android:id="@+id/ll_diabetes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_questionP6">
         <TextView
             android:id="@+id/tv_diabetes"
             android:layout_width="wrap_content"
@@ -202,9 +211,11 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_Hypertension"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_diabetes">
         <TextView
             android:id="@+id/tv_Hypertension"
             android:layout_width="wrap_content"
@@ -244,11 +255,14 @@
         android:id="@+id/tv_graduate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="จบการศึกษา" />
+        android:text="จบการศึกษา"
+        android:layout_below="@+id/ll_Hypertension"/>
     <RadioGroup
+        android:id="@+id/rgp_graduate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_graduate">
 
         <RadioButton
             android:id="@+id/rbn_nonStudy"
@@ -276,11 +290,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_status"
-        android:text="สถานภาพ"/>
+        android:text="สถานภาพ"
+        android:layout_below="@+id/rgp_graduate"/>
     <RadioGroup
+        android:id="@+id/rgp_status"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_status">
 
         <RadioButton
             android:id="@+id/rbn_single"
@@ -300,11 +317,14 @@
         android:id="@+id/tv_work"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="อาชีพ"/>
+        android:text="อาชีพ"
+        android:layout_below="@+id/rgp_status"/>
     <RadioGroup
+        android:id="@+id/rgp_work"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+
+        android:layout_below="@+id/tv_work">
 
         <RadioButton
             android:id="@+id/rbn_gardener"
@@ -321,9 +341,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="รับจ้าง"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+
         <RadioButton
             android:id="@+id/rbn_other"
             android:layout_width="wrap_content"
@@ -338,9 +357,17 @@
                 android:layout_marginLeft="28dp"
                 android:layout_toRightOf="@+id/rbn_other"
                 android:ems="10" />
-        </RelativeLayout>
+
     </RadioGroup>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:id="@+id/btn_save"
+        android:layout_below="@+id/rgp_work"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+
+</RelativeLayout>
 </ScrollView>

@@ -34,5 +34,6 @@ dependencies {
     compile 'com.android.support:design:22.2.0'
     //compile 'info.hoang8f:fbutton:1.0.5'
     compile 'com.github.eluleci:flatui:3.0.0'
+    
 
 }

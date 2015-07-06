@@ -24,12 +24,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MenuButtonActivity"
             android:label="@string/title_activity_menu_button" >
-
         </activity>
         <activity
             android:name=".ScreenAge14to34YearsActivity"
@@ -42,6 +40,14 @@
         <activity
             android:name=".ResultActivity"
             android:label="@string/title_activity_result" >
+        </activity>
+        <activity
+            android:name=".ResultNotRiskActivity"
+            android:label="@string/title_activity_result_not_risk" >
+        </activity>
+        <activity
+            android:name=".ResultRiskActivity"
+            android:label="@string/title_activity_result_risk" >
         </activity>
     </application>
 

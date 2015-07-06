@@ -6,95 +6,23 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="me.dev.bkk.ncd.ResultActivityFragment">
 
-    <TextView
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/result_normal"
-        android:id="@+id/tv_result"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/btn_not_risk"
+        android:layout_above="@+id/btn_risk"
+        android:layout_alignLeft="@+id/btn_risk"
+        android:layout_alignStart="@+id/btn_risk"
+        android:textSize="36sp"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/you_not_risk"
-        android:id="@+id/tv_you_not_risk"
-        android:layout_below="@+id/tv_result"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/advice"
-        android:id="@+id/tv_advice"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/tv_you_not_risk"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/advice_one"
-        android:id="@+id/tv_advice_one"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/tv_advice"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/advice_two"
-        android:id="@+id/tv_advice_two"
-        android:layout_below="@+id/tv_advice_one"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/two_one"
-        android:id="@+id/tv_one"
-        android:layout_below="@+id/tv_advice_two"
-        android:layout_alignLeft="@+id/tv_you_not_risk"
-        android:layout_alignStart="@+id/tv_you_not_risk"
-        android:layout_marginTop="25dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/two_two"
-        android:id="@+id/tv_two"
-        android:layout_below="@+id/tv_one"
-        android:layout_alignLeft="@+id/tv_one"
-        android:layout_alignStart="@+id/tv_one" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/two_three"
-        android:id="@+id/tv_three"
-        android:layout_below="@+id/tv_two"
-        android:layout_alignLeft="@+id/tv_two"
-        android:layout_alignStart="@+id/tv_two" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/two_four"
-        android:id="@+id/tv_four"
-        android:layout_below="@+id/tv_three"
-        android:layout_alignLeft="@+id/tv_three"
-        android:layout_alignStart="@+id/tv_three" />
+        android:text="@string/result_risk"
+        android:id="@+id/btn_risk"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"/>
 </RelativeLayout>

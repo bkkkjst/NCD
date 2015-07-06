@@ -12,7 +12,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tv_header"
         android:layout_centerHorizontal="true"
-        android:text="@string/header_user_agree" />
+        android:text="@string/header_user_agree"
+        android:textSize="28dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +23,8 @@
         android:id="@+id/tv_age14to34years"
         android:layout_below="@+id/tv_header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp"
+        android:textSize="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +35,8 @@
         android:layout_below="@+id/tv_age14to34years"
         android:layout_alignLeft="@+id/tv_age14to34years"
         android:layout_alignStart="@+id/tv_age14to34years"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp"
+        android:textSize="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +46,9 @@
         android:id="@+id/tv_warning"
         android:gravity="center_horizontal"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/blood_primary"
+        android:textSize="24dp"/>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -60,7 +65,8 @@
             android:layout_height="wrap_content"
             android:text="@string/agree"
             android:id="@+id/rbn_agree"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="24dp"/>
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -68,7 +74,8 @@
             android:text="@string/no"
             android:id="@+id/rbn_no_agree"
             android:layout_gravity="end"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="24dp"/>
 
     </RadioGroup>
 
@@ -78,6 +85,7 @@
         android:text="@string/btn_go"
         android:id="@+id/btn_go"
         android:layout_below="@+id/rg_agree_or_no"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="28dp"/>
 
 </RelativeLayout>
