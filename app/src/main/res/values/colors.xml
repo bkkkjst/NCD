@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_blue">#4FC3F7</color>
+    <color name="header_blue">#01579B</color>
+    <color name="font_blue">#E1F5FE</color>
+    <color name="font_rbn">#A1887F</color>
+</resources>

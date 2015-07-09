@@ -3,6 +3,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scrollView">
 
 <RelativeLayout
@@ -18,27 +19,35 @@
         android:id="@+id/tv_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="เพศ"/>
+        android:text="เพศ"
+        android:textSize="28sp"
+        />
 
     <RadioGroup
         android:layout_below="@id/tv_gender"
         android:id="@+id/rgp_gender"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <RadioButton
             android:id="@+id/rbn_male"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ชาย"/>
+            android:text="ชาย"
+            android:textSize="22sp"
+            />
         <RadioButton
             android:id="@+id/rbn_female"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="หญิง"/>
+            android:text="หญิง"
+            android:textSize="22sp"
+            />
 
     </RadioGroup>
 
     <TextView
+        android:textSize="28sp"
         android:layout_below="@id/rgp_gender"
         android:id="@+id/tv_idCard"
         android:layout_width="match_parent"
@@ -51,6 +60,7 @@
         android:layout_height="wrap_content"
         android:hint="เลขบัตรประจำตัวประชาชน 13 หลัก"/>
     <TextView
+        android:textSize="28sp"
         android:layout_below="@+id/etx_idCard"
         android:id="@+id/tv_birthDate"
         android:layout_width="match_parent"
@@ -63,6 +73,7 @@
         android:text="วัน/เดือน/ปี"
         android:layout_below="@+id/tv_birthDate"/>
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_religion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,6 +104,7 @@
     </RadioGroup>
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_weightBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,6 +119,7 @@
 
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,6 +133,7 @@
         android:layout_below="@+id/tv_height"/>
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_waistline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -140,6 +154,7 @@
     android:orientation="horizontal"
     android:layout_below="@+id/etx_waistline">
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_BloodPressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -150,6 +165,7 @@
         android:layout_height="wrap_content"
         android:hint="มิลลิเมตรปรอท"/>
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_slash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -165,6 +181,7 @@
 
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_questionP6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -172,22 +189,25 @@
         android:layout_below="@+id/ll_BloodPressure"/>
 
     <LinearLayout
+        android:textSize="30sp"
         android:id="@+id/ll_diabetes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_below="@+id/tv_questionP6">
         <TextView
+            android:textSize="28sp"
             android:id="@+id/tv_diabetes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="โรคเบาหวาน"/>
 
         <RadioGroup
+
             android:id="@+id/rgp_diabetes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <RadioButton
                 android:id="@+id/rbn_yes"
                 android:layout_width="match_parent"
@@ -214,9 +234,10 @@
         android:id="@+id/ll_Hypertension"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_below="@+id/ll_diabetes">
         <TextView
+            android:textSize="28sp"
             android:id="@+id/tv_Hypertension"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -228,8 +249,7 @@
             android:id="@+id/rgp_Hypertension"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="right">
+            android:orientation="vertical">
             <RadioButton
                 android:id="@+id/rbn_yes_Hypertension"
                 android:layout_width="match_parent"
@@ -252,6 +272,7 @@
     </LinearLayout>
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_graduate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -287,6 +308,7 @@
     </RadioGroup>
 
     <TextView
+        android:textSize="28sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_status"
@@ -314,6 +336,7 @@
     </RadioGroup>
 
     <TextView
+        android:textSize="28sp"
         android:id="@+id/tv_work"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -361,12 +384,14 @@
     </RadioGroup>
 
     <Button
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_save"
         android:id="@+id/btn_save"
         android:layout_below="@+id/rgp_work"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
 
 </RelativeLayout>

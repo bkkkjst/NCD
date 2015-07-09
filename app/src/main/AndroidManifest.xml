@@ -9,6 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:theme="@style/Information_Theme"
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
@@ -20,8 +21,8 @@
             android:name=".UserAgreeActivity"
             android:label="@string/title_activity_user_agree" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
