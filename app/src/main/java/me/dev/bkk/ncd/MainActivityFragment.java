@@ -5,6 +5,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -13,29 +14,51 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import eu.inmite.android.lib.validations.form.FormValidator;
-import eu.inmite.android.lib.validations.form.annotations.NotEmpty;
-import eu.inmite.android.lib.validations.form.annotations.RegExp;
-import eu.inmite.android.lib.validations.form.callback.SimpleErrorPopupCallback;
+import com.andreabaccega.widget.FormEditText;
+import com.mobsandgeeks.saripaar.ValidationError;
+import com.mobsandgeeks.saripaar.Validator;
+import com.mobsandgeeks.saripaar.annotation.Checked;
+import com.mobsandgeeks.saripaar.annotation.DecimalMin;
+import com.mobsandgeeks.saripaar.annotation.Digits;
+import com.mobsandgeeks.saripaar.annotation.Future;
+import com.mobsandgeeks.saripaar.annotation.Max;
+import com.mobsandgeeks.saripaar.annotation.Min;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Order;
+import com.mobsandgeeks.saripaar.annotation.Select;
+import com.mobsandgeeks.saripaar.annotation.Size;
+
+import java.util.List;
 
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment {
+public class MainActivityFragment extends Fragment implements Validator.ValidationListener {
+    Validator validator;
+
+
 
     RadioGroup rgp_gender, rgp_religion, rgp_diabetes, rgp_Hypertension, rgp_graduate,
                rgp_status, rgp_work;
 
-    RadioButton rbn_male, rbn_female, rbn_genderSelect, rbn_religionSelect,
+    RadioButton rbn_genderSelect, rbn_religionSelect,
                 rbn_diabetesSelect, rbn_HypertensionSelect, rbn_graduateSelect,
                 rbn_statusSelect, rbn_workSelect;
-
-    @RegExp(value = "EMAIL", messageId = R.string.validation_idCard)
+    @Order(value = 1)
+    @NotEmpty(sequence = 1, message = "กรุณากรอกข้อมูล")@Digits(sequence = 2, message = "กรุณากรอกเฉพาะตัวเลข 0-9")@Size(sequence = 3, min = 13, max = 13, trim = true, message = "ต้องมีความยาว 13 ตัว")
     EditText etx_idCard;
 
-    EditText etx_birthDay, etx_weightBody, etx_height, etx_waistline,
-             etx_BloodPressureFront, etx_BloodPressureBack, etx_other;
+    @Order(value = 2)
+    @NotEmpty(message = "กรุณาเลือกวันที่")
+    EditText etx_birthDay;
+
+
+    EditText etx_other;
+    @Order(value = 3)
+    @NotEmpty@Digits(message = "กรุณากรอกเฉพาะตัวเลข 0-9")
+    EditText etx_weightBody, etx_height, etx_waistline,
+             etx_BloodPressureFront, etx_BloodPressureBack;
 
     Button btn_save;
 
@@ -49,7 +72,8 @@ public class MainActivityFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-
+        validator = new Validator(this);
+        validator.setValidationListener(this);
 
         etx_birthDay = (EditText) rootView.findViewById(R.id.etx_birthDay);
         rgp_gender = (RadioGroup) rootView.findViewById(R.id.rgp_gender);
@@ -72,7 +96,7 @@ public class MainActivityFragment extends Fragment {
         etx_waistline = (EditText) rootView.findViewById(R.id.etx_waistline);
         etx_BloodPressureFront = (EditText) rootView.findViewById(R.id.etx_BloodPressureFront);
         etx_BloodPressureBack = (EditText) rootView.findViewById(R.id.etx_BloodPressureBack);
-        etx_other = (EditText) rootView.findViewById(R.id.etx_other);
+
 
 
         etx_birthDay.setOnClickListener(new View.OnClickListener() {
@@ -86,16 +110,9 @@ public class MainActivityFragment extends Fragment {
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"bkk.dev.me@gmail.com"});
-                i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
-                i.putExtra(Intent.EXTRA_TEXT   , textToString());
-                try {
-                    startActivity(Intent.createChooser(i, "Send mail..."));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-                }
+
+                validator.validate();
+
             }
         });
 
@@ -106,7 +123,6 @@ public class MainActivityFragment extends Fragment {
 
 
     private String textToString(){
-
         String textToEmail,other;
 
         int genderSelect = rgp_gender.getCheckedRadioButtonId();
@@ -133,29 +149,62 @@ public class MainActivityFragment extends Fragment {
         other = rbn_workSelect.getText().toString();
 
         if(other.equals("อื่นๆ")){
+
+
+            etx_other = (EditText) getActivity().findViewById(R.id.etx_other);
             other = etx_other.getText().toString();
 
         }
 
 
         textToEmail =   "เพศ : "+rbn_genderSelect.getText().toString()+"\n" +
-                        "เลขบัตรประจำตัวประชาชน : "+ etx_idCard.getText().toString()+"\n" +
-                        "วัน/เดือน/ปี : "+etx_birthDay.getText().toString()+"\n" +
-                        "ศาสนา : "+rbn_religionSelect.getText().toString()+"\n" +
-                        "น้ำหนัก : "+etx_weightBody.getText().toString()+"\n" +
-                        "ส่วนสูง : "+etx_height.getText().toString()+"\n" +
-                        "รอบเอว : "+etx_waistline.getText().toString()+"\n" +
-                        "ความดันโลหิต : "+etx_BloodPressureFront.getText().toString()+" / "+etx_BloodPressureBack.getText().toString()+"\n" +
-                        "โรคประจำตัว : \n" +
-                                    "\t\t\t\t\t\t โรคเบาหวาน : "+rbn_diabetesSelect.getText().toString()+"\n" +
-                                    "\t\t\t\t\t\t โรคความดันโลหิตสูง : "+rbn_HypertensionSelect.getText().toString()+"\n" +
-                        "จบการศึกษา : "+rbn_graduateSelect.getText().toString()+"\n" +
-                        "สถานภาพ : "+rbn_statusSelect.getText().toString()+"\n" +
-                        "อาชีพ : "+other;
+                "เลขบัตรประจำตัวประชาชน : "+ etx_idCard.getText().toString()+"\n" +
+                "วัน/เดือน/ปี : "+etx_birthDay.getText().toString()+"\n" +
+                "ศาสนา : "+rbn_religionSelect.getText().toString()+"\n" +
+                "น้ำหนัก : "+etx_weightBody.getText().toString()+"\n" +
+                "ส่วนสูง : "+etx_height.getText().toString()+"\n" +
+                "รอบเอว : "+etx_waistline.getText().toString()+"\n" +
+                "ความดันโลหิต : "+etx_BloodPressureFront.getText().toString()+" / "+etx_BloodPressureBack.getText().toString()+"\n" +
+                "โรคประจำตัว : \n" +
+                "\t\t\t\t\t\t โรคเบาหวาน : "+rbn_diabetesSelect.getText().toString()+"\n" +
+                "\t\t\t\t\t\t โรคความดันโลหิตสูง : "+rbn_HypertensionSelect.getText().toString()+"\n" +
+                "จบการศึกษา : "+rbn_graduateSelect.getText().toString()+"\n" +
+                "สถานภาพ : "+rbn_statusSelect.getText().toString()+"\n" +
+                "อาชีพ : "+other;
+
 
         return textToEmail;
     }
 
 
+    @Override
+    public void onValidationSucceeded() {
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"bkk.dev.me@gmail.com"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+        i.putExtra(Intent.EXTRA_TEXT   , textToString());
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
 
+    @Override
+    public void onValidationFailed(List<ValidationError> errors) {
+
+        for (ValidationError error : errors) {
+            View view = error.getView();
+            String message = error.getCollatedErrorMessage(getActivity());
+
+            // Display error messages ;)
+            if (view instanceof EditText) {
+                ((EditText) view).setError(message);
+            } else {
+                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+            }
+        }
+
+    }
 }
