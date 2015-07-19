@@ -12,6 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tv_header"
         android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
         android:text="@string/header_user_agree"
         android:textSize="28dp"/>
 

@@ -1,0 +1,5 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
+    android:name="me.dev.bkk.ncd.Select14to34Or35upFragment"
+    tools:layout="@layout/fragment_select14to34_or35up" android:layout_width="match_parent"
+    android:layout_height="match_parent" />

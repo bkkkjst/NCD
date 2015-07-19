@@ -60,8 +60,9 @@
             android:text="@string/screen_age_14_to_34_years"
             android:singleLine="false"/>
 
+
         <com.cengalabs.flatui.views.FlatButton
-            android:id="@+id/btn_result"
+            android:id="@+id/btn_behavior"
             style="@style/MainTextView"
 
             flatui:fl_theme="@array/sand"
@@ -70,7 +71,21 @@
             flatui:fl_fontFamily="ThaiSansNeue"
             flatui:fl_fontWeight="regular"
             flatui:fl_fontExtension="ttf"
+            android:text="@string/tv_headerScreenHypertension"
+            android:singleLine="false"/>
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/btn_result"
+            style="@style/MainTextView"
+
+            flatui:fl_theme="@array/candy"
+            flatui:fl_textAppearance="fl_light"
+            flatui:fl_blockButtonEffectHeight="3dp"
+            flatui:fl_fontFamily="ThaiSansNeue"
+            flatui:fl_fontWeight="regular"
+            flatui:fl_fontExtension="ttf"
             android:text="@string/result"
             android:singleLine="false"/>
+
     </LinearLayout>
 </LinearLayout>

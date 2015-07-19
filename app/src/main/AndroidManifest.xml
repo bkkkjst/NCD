@@ -9,9 +9,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:theme="@style/Information_Theme"
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Information_Theme" >
         </activity>
         <activity
             android:name=".SelectYesActivity"
@@ -21,8 +21,8 @@
             android:name=".UserAgreeActivity"
             android:label="@string/title_activity_user_agree" >
             <intent-filter>
-
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -49,6 +49,47 @@
         <activity
             android:name=".ResultRiskActivity"
             android:label="@string/title_activity_result_risk" >
+        </activity>
+        <activity
+            android:name=".Select14to34Or35up"
+            android:label="@string/title_activity_select14to34_or35up" >
+        </activity>
+        <activity
+            android:name=".hypertension.ScreenHypertension"
+            android:label="@string/title_activity_screen_hypertension" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionOne"
+            android:label="@string/title_activity_question_one"
+            android:theme="@style/Information_Theme" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionTwo"
+            android:label="@string/title_activity_question_two" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionFour"
+            android:label="@string/title_activity_question_four" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionFive"
+            android:label="@string/title_activity_question_five" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionSix"
+            android:label="@string/title_activity_question_six" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionSeven"
+            android:label="@string/title_activity_question_seven" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionEight"
+            android:label="@string/title_activity_question_eight" >
+        </activity>
+        <activity
+            android:name=".hypertension.QuestionThree"
+            android:label="@string/title_activity_question_three" >
         </activity>
     </application>
 

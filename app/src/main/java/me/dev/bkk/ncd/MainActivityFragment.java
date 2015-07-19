@@ -46,7 +46,7 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
                 rbn_diabetesSelect, rbn_HypertensionSelect, rbn_graduateSelect,
                 rbn_statusSelect, rbn_workSelect;
     @Order(value = 1)
-    @NotEmpty(sequence = 1, message = "กรุณากรอกข้อมูล")@Digits(sequence = 2, message = "กรุณากรอกเฉพาะตัวเลข 0-9")@Size(sequence = 3, min = 13, max = 13, trim = true, message = "ต้องมีความยาว 13 ตัว")
+    @NotEmpty(trim = true, sequence = 1 ,message = "กรุณากรอกข้อมูล" )@Size(sequence = 2, min = 13, max = 13, trim = true, message = "ต้องมีความยาว 13 ตัว")
     EditText etx_idCard;
 
     @Order(value = 2)
@@ -56,8 +56,11 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
 
     EditText etx_other;
     @Order(value = 3)
-    @NotEmpty@Digits(message = "กรุณากรอกเฉพาะตัวเลข 0-9")
-    EditText etx_weightBody, etx_height, etx_waistline,
+    @NotEmpty(message = "กรุณากรอกเฉพาะตัวเลข 0-9")
+    EditText etx_weightBody;
+    @Order(value = 4)
+    @NotEmpty(message = "กรุณากรอกเฉพาะตัวเลข 0-9")
+    EditText etx_height, etx_waistline,
              etx_BloodPressureFront, etx_BloodPressureBack;
 
     Button btn_save;
@@ -70,7 +73,7 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         validator = new Validator(this);
         validator.setValidationListener(this);
@@ -112,6 +115,8 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
             public void onClick(View v) {
 
                 validator.validate();
+
+
 
             }
         });

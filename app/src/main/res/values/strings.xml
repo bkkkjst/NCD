@@ -9,7 +9,7 @@
 
 
     <!-- layout user agree-->
-    <string name="header_user_agree"><u>แบบบันทึกคัดกรองความเสี่ยงโรคเบาหวาน</u></string>
+    <string name="header_user_agree"><u>แบบบันทึกคัดกรองความเสี่ยงโรคเบาหวานและความดันโลหิตสูง</u></string>
     <string name="age_14_to_34_years">อายุ 14 - 34 ปี</string>
     <string name="age_35_years_up">อายุ 35 ปีขึ้นไป</string>
     <string name="rule">เฉพาะผู้ไม่เป็นผู้ป่วยเบาหวานและความดันโลหิตสูง</string>
@@ -21,8 +21,8 @@
 
     <!-- layout menu button-->
     <string name="personal_information">ประวัติส่วนตัว</string>
-    <string name="screen_age_14_to_34_years">แบบคัดกรอง อายุ 14 - 34 ปี</string>
-    <string name="screen_age_35_years_up">แบบคัดกรอง อายุ 35 ปี ขึ้นไป</string>
+    <string name="screen_age_14_to_34_years">แบบคัดกรองโรคเบาหวาน</string>
+    <string name="screen_age_35_years_up">แบบคัดกรองโรคความดันโลหิตสูง</string>
     <string name="result">แปลผล</string>
 
 
@@ -78,6 +78,101 @@
 
     <string name="title_activity_result_not_risk">คำแนะนำสำหรับกลุ่มปกติ</string>
     <string name="title_activity_result_risk">คำแนะนำสำหรับกลุ่มเสี่ยง</string>
-    
+    <string name="title_activity_select14to34_or35up">Select14to34Or35up</string>
+    <string name="title_activity_screen_hypertension">แบบคัดกรองความเสี่ยงโรคความดันโลหิตสูง</string>
+
+    <string name="tv_hypertension">ความดันโลหิต</string>
+    <string name="title_activity_question_one">QuestionOne</string>
+
+
+    <!--Hypertension Question-->
+    <string name="tv_headerScreenHypertension">แบบสอบถามพฤติกรรม</string>
+    <string name="q1">1. <u>บิดาหรือมารดา</u>ของท่านมีประวัติการป่วยโรคใดหรือไม่</string>
+    <string name="q2">2. พี่น้อง(สายตรง) มีประวัติเจ็บป่วยด้วยโรค</string>
+    <string name="q3">3. ท่านมีประวัติเจ็บป่วยต้องพบแพทย์หรือไม่</string>
+    <string name="q4">4. กรณีท่านมีประวัติการเจ็บป่วยตามข้อที่ผ่านมา ท่านจะปฏิบัติตนอย่างไร</string>
+    <string name="q5">5. ท่านสูบบุหรี่หรือไม่</string>
+    <string name="q6">6. ท่านดื่มเครื่องดื่มแอลกอฮอล์หรือไม่</string>
+    <string name="q7">7. ท่านออกกำลังกาย/เล่นกีฬา</string>
+    <string name="q8">8. ท่านชอบอาหารรสใด</string>
+
+    <!--Choice No.1-->
+    <string name="ch1_1">เบาหวาน</string>
+    <string name="ch1_2">ความดันโลหิตสูง</string>
+    <string name="ch1_3">โรคเกาท์</string>
+    <string name="ch1_4">ไตวายเรื้อรัง</string>
+    <string name="ch1_5">กล้ามเนื้อหัวใจตาย</string>
+    <string name="ch1_6">เส้นเลือดสมอง</string>
+    <string name="ch1_7">ถุงลมโป่งพอง</string>
+    <string name="ch1_8">ไม่ทราบ</string>
+    <string name="ch1_9">อื่นๆ</string>
+
+    <!--Choice No.2-->
+    <string name="ch2_1">เบาหวาน</string>
+    <string name="ch2_2">ความดันโลหิตสูง</string>
+    <string name="ch2_3">โรคไต</string>
+    <string name="ch2_4">กล้ามเนื้อหัวใจตาย</string>
+    <string name="ch2_5">เส้นเลือดสมอง</string>
+    <string name="ch2_6">ถุงลมโป่งพอง</string>
+    <string name="ch2_7">ไม่ทราบ</string>
+    <string name="ch2_8">อื่นๆ</string>
+
+    <!--Choice No.3-->
+    <string name="ch3_31">มี</string>
+    <string name="ch3_32">ไม่มี</string>
+    <string name="ch3_33">ไม่เคยตรวจ</string>
+    <string name="ch3_1">โรคเบาหวาน(DM)</string>
+    <string name="ch3_2">โรคความดันโลหิตสูง (HT)</string>
+    <string name="ch3_3">โรคตับ</string>
+    <string name="ch3_4">โรคอัมพาต</string>
+    <string name="ch3_5">โรคหัวใจ</string>
+    <string name="ch3_6">ไขมันในเลือดผิดปกติ</string>
+    <string name="ch3_7">แผลที่เท้า/ตัดขา(จากเบาหวาน)</string>
+    <string name="ch3_8">คลอดบุตรน้ำหนักเกิน  4  กิโลกรัม</string>
+    <string name="ch3_9">ดื่มน้ำบ่อยและมาก</string>
+    <string name="ch3_10">ปัสสาวะกลางคืน  3  ครั้ง  ขึ้นไป</string>
+    <string name="ch3_11">กินจุแต่ผอมลง</string>
+    <string name="ch3_12">น้ำหนักลดอ่อนเพลีย</string>
+    <string name="ch3_13">เป็นแผลริมฝีปากบ่อยและหายยาก</string>
+    <string name="ch3_14">คันตามผิวหนังและอวัยวะสืบพันธุ์</string>
+    <string name="ch3_15">ตาพร่ามัวต้องเปลี่ยนแว่นบ่อย</string>
+    <string name="ch3_16">ชาปลายมือปลายเท้าโดยไม่ทราบสาเหตุ</string>
+
+    <!--Choice No.4-->
+    <string name="ch4_1">รับการรักษาอยู่/ปฏิบัติตามที่แพทย์แนะนำ</string>
+    <string name="ch4_2">รับการรักษาแต่ไม่สม่ำเสมอ</string>
+    <string name="ch4_3">เคยรักษาขณะนี้ไม่รักษา / หายาทานเอง</string>
+
+
+    <!--Choice No.5-->
+    <string name="ch5_1">สูบ</string>
+    <string name="ch5_2">ไม่สูบ</string>
+    <string name="ch5_3">เคยสูบแต่เลิกแล้ว</string>
+
+    <!--Choice No.6-->
+    <string name="Ch6_1">ดื่ม</string>
+    <string name="Ch6_2">ไม่ดื่ม</string>
+    <string name="Ch6_3">เคยดื่มแต่เลิกแล้ว</string>
+
+    <!--Choice No.7-->
+    <string name="ch7_1">ไม่ออกกำลังกาย</string>
+    <string name="ch7_2">ออกกำลังกายน้อยกว่า สัปดาห์ละ  3  ครั้ง</string>
+    <string name="ch7_3">ออกกำลังกาย สัปดาห์ละ  3  ครั้ง  ครั้งละ  30  นาที  สม่ำเสมอ</string>
+    <string name="ch7_4">ออกกำลังกาย สัปดาห์ละมากกว่า  3  ครั้ง  ครั้งละ  30  นาที  สม่ำเสมอ</string>
+    <string name="ch7_5">ออกกำลังกายทุกวัน  ครั้งละ  30  นาที</string>
+
+    <!--Choice No.8-->
+    <string name="ch8_1">หวาน</string>
+    <string name="ch8_2">เค็ม</string>
+    <string name="ch8_3">มัน</string>
+    <string name="ch8_4">ไม่ชอบทุกข้อ</string>
+    <string name="title_activity_question_two">QuestionTwo</string>
+    <string name="title_activity_question_four">QuestionFour</string>
+    <string name="title_activity_question_five">QuestionFive</string>
+    <string name="title_activity_question_six">QuestionSix</string>
+    <string name="title_activity_question_seven">QuestionSeven</string>
+    <string name="title_activity_question_eight">QuestionEight</string>
+    <string name="title_activity_question_three">QuestionThree</string>
+
 
 </resources>
