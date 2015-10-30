@@ -1,6 +1,7 @@
 package me.dev.bkk.ncd;
 
 import android.content.Intent;
+import android.support.annotation.Size;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -26,7 +27,6 @@ import com.mobsandgeeks.saripaar.annotation.Min;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 import com.mobsandgeeks.saripaar.annotation.Order;
 import com.mobsandgeeks.saripaar.annotation.Select;
-import com.mobsandgeeks.saripaar.annotation.Size;
 
 import java.util.List;
 
@@ -46,7 +46,8 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
                 rbn_diabetesSelect, rbn_HypertensionSelect, rbn_graduateSelect,
                 rbn_statusSelect, rbn_workSelect;
     @Order(value = 1)
-    @NotEmpty(trim = true, sequence = 1 ,message = "กรุณากรอกข้อมูล" )@Size(sequence = 2, min = 13, max = 13, trim = true, message = "ต้องมีความยาว 13 ตัว")
+    @NotEmpty(trim = true, sequence = 1 ,message = "กรุณากรอกข้อมูล" )
+    @Size(min = 13, max = 13)
     EditText etx_idCard;
 
     @Order(value = 2)
