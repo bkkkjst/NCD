@@ -3,7 +3,6 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-
         <item name="android:typeface">monospace</item>
         <item name="android:textColor">@color/font_blue</item>
         <item name="android:windowBackground">@color/background_blue</item>
@@ -41,5 +40,6 @@
 
 
     </style>
+
 
 </resources>

@@ -1,13 +1,20 @@
 package me.dev.bkk.ncd.hypertension;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import me.dev.bkk.ncd.R;
 
-public class QuestionOne extends AppCompatActivity {
+public class QuestionOne extends AppCompatActivity{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,4 +44,20 @@ public class QuestionOne extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    /*public  void rbListener(View view){
+        Log.e("QuestionOneFragment", String.valueOf(view.getId()) +" | size"+integerList.size());
+        Bundle bundle = new Bundle();
+
+        if(!integerList.contains(view.getId())){
+            integerList.add(view.getId());
+        }else{}
+
+
+        bundle.putIntegerArrayList("rbnId", (ArrayList<Integer>) integerList);
+
+        QuestionOneFragment questionOneFragment = new QuestionOneFragment();
+        questionOneFragment.setArguments(bundle);
+    }*/
 }

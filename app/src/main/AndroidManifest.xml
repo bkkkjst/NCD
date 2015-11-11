@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="@string/personal_information"
             android:theme="@style/Information_Theme" >
         </activity>
         <activity
@@ -60,8 +60,7 @@
         </activity>
         <activity
             android:name=".hypertension.QuestionOne"
-            android:label="@string/title_activity_question_one"
-            android:theme="@style/Information_Theme" >
+            android:label="@string/title_activity_question_one" >
         </activity>
         <activity
             android:name=".hypertension.QuestionTwo"
