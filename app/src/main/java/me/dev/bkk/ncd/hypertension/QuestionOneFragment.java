@@ -88,17 +88,22 @@ public class QuestionOneFragment extends Fragment{
 
     private boolean checkSelectRadioButton(int[] rbnId){
         boolean check = false;
+        StringBuilder answer1 = new StringBuilder();
             for(int i = 0; i < rbnId.length; i++){
                 RadioButton radioButton = (RadioButton) getActivity().findViewById(rbnId[i]);
                 if(radioButton.isChecked()){
                     String selected = radioButton.getText().toString();
                     String[] strings = new String[rbnId.length];
                     strings[i] = selected;
+                    answer1.append(strings[i]+"\n");
                     check = true;
                 }else{
 
                 }
             }
+        Result result = new Result();
+        result.setAnswer1(answer1.toString());
+
         return check;
     }
 

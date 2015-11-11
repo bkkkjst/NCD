@@ -30,13 +30,23 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="32dp" />
 
-    <RadioGroup
+    <!--<RadioGroup
         android:id="@+id/rgp_ch2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true">-->
+
+    <LinearLayout
+        android:id="@+id/ll_answer_question_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/tv_q2">
+
+
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -94,6 +104,16 @@
             android:id="@+id/rbn_ch8"
             android:checked="false" />
 
-    </RadioGroup>
+    </LinearLayout>
+    <!--</RadioGroup>-->
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_below="@+id/ll_answer_question_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ตกลง"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
