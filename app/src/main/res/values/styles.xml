@@ -41,5 +41,9 @@
 
     </style>
 
-
+    <style name="Question.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">22sp</item>
+        <item name="android:windowBackground">@color/background_blue</item>
+        <item name="android:typeface">monospace</item>
+    </style>
 </resources>

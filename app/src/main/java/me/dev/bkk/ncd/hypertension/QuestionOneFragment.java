@@ -80,6 +80,7 @@ public class QuestionOneFragment extends Fragment{
         if (checkSelectRadioButton(rbnId)) {
             Intent saveAndNextQuestion = new Intent(getActivity(), QuestionTwo.class);
             startActivity(saveAndNextQuestion);
+            getActivity().finish();
         } else {
 
         }
@@ -101,8 +102,7 @@ public class QuestionOneFragment extends Fragment{
 
                 }
             }
-        Result result = new Result();
-        result.setAnswer1(answer1.toString());
+        Result.getInstance().setAnswer1(answer1.toString());
 
         return check;
     }

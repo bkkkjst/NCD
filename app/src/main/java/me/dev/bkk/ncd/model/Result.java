@@ -13,6 +13,25 @@ public class Result {
     String answer7;
     String answer8;
 
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
+    }
+
+    String information;
+
+
+    private static final Result INSTANCE = new Result();
+
+    public Result() {
+    }
+
+    public static Result getInstance(){
+        return INSTANCE;
+    }
     public String getHypertension() {
         return hypertension;
     }

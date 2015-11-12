@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -42,6 +43,7 @@ public class QuestionTwoFragment extends Fragment {
     @Bind(R.id.rbn_ch8)
     RadioButton rbnCh8;
 
+    Bundle bundle;
 
     int[] rbnId = { R.id.rbn_ch1, R.id.rbn_ch2, R.id.rbn_ch3, R.id.rbn_ch4,
             R.id.rbn_ch5, R.id.rbn_ch6, R.id.rbn_ch7, R.id.rbn_ch8};
@@ -67,8 +69,7 @@ public class QuestionTwoFragment extends Fragment {
     void saveAndNextQuestion() {
 
         if (checkSelectRadioButton(rbnId)) {
-            Intent saveAndNextQuestion = new Intent(getActivity(), QuestionThree.class);
-            startActivity(saveAndNextQuestion);
+            getActivity().finish();
         } else {
 
         }
@@ -84,14 +85,32 @@ public class QuestionTwoFragment extends Fragment {
                 String selected = radioButton.getText().toString();
                 String[] strings = new String[rbnId.length];
                 strings[i] = selected;
-                answer2.append(strings[i]+"\n");
+                answer2.append(strings[i] + "\n");
+
+
                 check = true;
             }else{
 
             }
         }
-        Result result = new Result();
-        result.setAnswer2(answer2.toString());
+        Result.getInstance().setAnswer2(answer2.toString());
+
+        String data = Result.getInstance().getInformation()+"\n\n"
+                +Result.getInstance().getAnswer1()+"\n"
+                +Result.getInstance().getAnswer2();
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc822");
+        intent.putExtra(Intent.EXTRA_EMAIL  , new String[]{});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+        intent.putExtra(Intent.EXTRA_TEXT, data);
+        try {
+            startActivity(Intent.createChooser(intent, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+
+
 
         return check;
     }

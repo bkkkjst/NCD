@@ -30,6 +30,8 @@ import com.mobsandgeeks.saripaar.annotation.Select;
 
 import java.util.List;
 
+import me.dev.bkk.ncd.model.Result;
+
 
 /**
  * A placeholder fragment containing a simple view.
@@ -178,6 +180,7 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
                 "สถานภาพ : "+rbn_statusSelect.getText().toString()+"\n" +
                 "อาชีพ : "+other;
 
+        Result.getInstance().setInformation(textToEmail);
 
         return textToEmail;
     }
@@ -187,7 +190,7 @@ public class MainActivityFragment extends Fragment implements Validator.Validati
     public void onValidationSucceeded() {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"bkk.dev.me@gmail.com"});
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{});
         i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
         i.putExtra(Intent.EXTRA_TEXT   , textToString());
         try {
